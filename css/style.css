@@ -1,0 +1,116 @@
+.slideshow-container
+{
+	position: relative;
+	width:400px;
+	height:300px;
+	overflow: hidden;
+}
+
+.slideshow-container .controls
+{
+	z-index:1;
+	position: absolute;
+	top: 40%;
+	width: 40px;
+	height: 40px;
+	font-size: 50px;
+	font-weight: 100;
+	line-height: 30px;
+	color: white;
+	text-align: center;
+	background: #222;
+	border: 3px solid white;
+	-webkit-border-radius: 23px;
+	-moz-border-radius: 23px;
+	border-radius: 23px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	text-decoration: none;
+	cursor: pointer;
+	user-select: none;
+}
+
+.slideshow-container .controls:hover
+{
+	opacity: 0.9;
+}
+
+.slideshow-container .controls.prev
+{
+	left:15px;
+}
+
+.slideshow-container .controls.next
+{
+	right:15px;
+}
+
+.slideshow
+{
+	height:300px;
+	position: relative;
+}
+
+.slideshow .placeholder
+{
+	background:#EFEFEF;
+	color:#444;
+	height:100%;
+	width:100%;
+	text-align: center;
+	display: -webkit-box;
+	-webkit-box-align: center;
+}
+
+.slideshow .placeholder div
+{
+	-webkit-box-flex:1;
+}
+
+.slideshow .slide
+{
+	width:400px;
+	height:300px;
+	float: left;
+}
+
+.slideshow .slide.selected
+{
+	display:block;
+}
+
+.slideshow .slide img
+{
+	width:100%;
+	height:100%;
+}
+
+.slideshow .slide img.resize
+{
+	height:300px;
+	width:auto;
+	margin: auto auto;
+	display: block;
+}
+
+.files
+{
+	text-align: center;
+}
+
+.fileuploader
+{
+	text-align: center;
+	padding-left: 50px;
+	display: inline-block;
+}
+
+.filecounter
+{
+	display: inline-block;
+	margin-left: -154px;
+	background: white;
+	width: 200px;
+	font-size: 13px;
+	height: 20px;
+}

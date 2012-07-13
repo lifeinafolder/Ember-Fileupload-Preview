@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Emberjs Slideshow</title>
+		<link rel='stylesheet' href='css/style.css'></link>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/ember-0.9.8.1.min.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<script type="text/x-handlebars">
+			{{#view App.slideshowView}}
+				{{#if multiple}}
+					{{#view App.slideshowControlsView class="controls prev"}}&lsaquo;{{/view}}
+					{{view App.slidesCollectionView contentBinding="content"}}
+					{{#view App.slideshowControlsView class="controls next"}}&rsaquo;{{/view}}
+				{{else}}
+					{{view App.slidesCollectionView contentBinding="content"}}
+				{{/if}}
+			{{/view}}
+			{{view App.fileUploader class="fileuploader"}}
+			<span class="filecounter">{{App.slides.content.length}} images uploaded</span>
+		</script>
+		<script type="text/x-handlebars" data-template-name="slide-item">
+			<img class="resize" {{bindAttr src="content.src"}}/>
+		</script>
+	</body>
